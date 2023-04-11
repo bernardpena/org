@@ -1,0 +1,28 @@
+{
+    "cSpell.ignoreWords": [
+        "Equipo",
+        "Organiza",
+        "Texto",
+        "componente",
+        "importante",
+        "importar",
+        "linea",
+        "poder"
+    ],
+    "cSpell.words": [
+        "Componentes",
+        "Formulario",
+        "Grupos",
+        "Header",
+        "Lugar",
+        "placeholderModificado"
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:org}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
+}
