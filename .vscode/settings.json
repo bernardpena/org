@@ -24,5 +24,6 @@
             "addWords": true,
             "scope": "workspace"
         }
-    }
+    },
+    "cSpell.language": "en,en-US"
 }
