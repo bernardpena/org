@@ -3,11 +3,13 @@ import './App.css';
 import Header from './Componentes/Header/Header';
 import Formulario from './Componentes/Formulario/Formulario.js';
 import MiOrg from './Componentes/MiOrg';
+import Equipo from './Componentes/Equipo';
+
 //El useState debe usarse dentro de un Componente o una 
 // funcion de un Componente!!! y antes del RETURN!!
 
 function App() {
-  const [mostrarFormulario, actualizarMostrar] = useState(true)
+  const [mostrarFormulario, actualizarMostrar] = useState(false)
 
   // !Ternario --> condicion ? seMuestra : noSeMuestra
   // Cortocircuito --> condicion && seMuestra
@@ -21,6 +23,7 @@ function App() {
       { mostrarFormulario === true ? <Formulario /> : <></> }
   
       <MiOrg cambiarMostrar ={cambiarMostrar} />
+      <Equipo />
     </div>
   );
 }

@@ -8,6 +8,7 @@ Boton
 cambiar
 cambio
 colaborador
+colaboradores
 comportamiento
 condicion
 Cortocircuito
@@ -38,6 +39,7 @@ Opciones
 Operador
 Organización
 Programacion
+Programación
 Puesto
 Refino
 Rellena
