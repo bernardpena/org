@@ -20,6 +20,7 @@ const Formulario = () => {
             nombre,
             puesto,
             foto,
+            equipo
         }
         console.log(datosAEnviar)
     }
