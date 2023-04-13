@@ -4,7 +4,7 @@ import CampoTexto from "../CampoTexto"
 import ListaOpciones from "../LIstaOpciones"
 import Boton from "../Boton"
 
-const Formulario = () => {
+const Formulario = (props) => {
     //evento = event - e, trabajar con form va asociado a preventDefault
 
     const [ nombre, actualizarNombre] = useState("")

@@ -18,6 +18,7 @@ debe
 dentro
 destructuracion
 Elemento
+encabezado
 Enviar
 Envio
 Equipos
@@ -42,6 +43,7 @@ Opciones
 Operador
 Organigrama
 Organización
+Peña
 Primario
 Programacion
 Programación

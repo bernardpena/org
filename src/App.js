@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Header from './Componentes/Header/Header';
-import Formulario from "./Componentes/Formulario/Formulario.js";
+import Formulario from './Componentes/Formulario/Formulario.js';
 import MiOrg from './Componentes/MiOrg';
 import Equipo from './Componentes/Equipo';
 
@@ -18,7 +18,7 @@ function App() {
       actualizarMostrar(!mostrarFormulario)
   } 
 
-  //lista de equipos
+  // lista de Equipos
   const equipos = [
     {
       titulo:"Lider SX",
@@ -42,23 +42,21 @@ function App() {
     },
     {
       titulo:"Grupo 4",
-      colorPrimario:"#DB6EBF",
-      colorSecundario:"#FAE9F5"
+      colorPrimario:"#FFBA05",
+      colorSecundario:"#FFF5D9"
     }
-  ]
+]
 
   return (
     <div >
       <Header />
-      {/* mostrarFormulario === true ? <Formulario /> : <></> */}
-      {mostrarFormulario && <formulario equipos={equipos.map((equipo) => equipo.titulo)} />}
+      {/*mostrarFormulario === true ? <formulario /> : <></> */}
+      {mostrarFormulario && < Formulario equipos={equipos.map((equipo) => equipo.titulo)} />}
       <MiOrg cambiarMostrar ={cambiarMostrar} />
-      
-      {
-        equipos.map( (equipo) => <Equipo datos={equipo} key={equipo.titulo} />)
-      }
-
-
+     
+     {
+      equipos.map((equipo) => <Equipo datos={equipo} key={equipo.titulo} /> )
+     }
     </div>
   );
 }
