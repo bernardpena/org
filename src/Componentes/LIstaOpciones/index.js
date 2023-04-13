@@ -7,10 +7,31 @@ const ListaOpciones = (props)=>{
 
         //})
     const equipos = [
-        "Grupo 1",
-        "Grupo 2",
-        "Grupo 3",
-        "Grupo 4"
+        {
+            titulo:"Lider SX",
+            colorPrimario:"#57C278",
+            colorSecundario:"#D9F7E9"
+        },
+        {
+            titulo:"Grupo 1",
+            colorPrimario:"#82CFFA",
+            colorSecundario:"#E8F8FF"
+        },
+        {
+            titulo:"Grupo 2",
+            colorPrimario:"#A6D157",
+            colorSecundario:"#F0F8E2"
+        },
+        {
+            titulo:"Grupo 3",
+            colorPrimario:"#E06B69",
+            colorSecundario:"#FDE7E8"
+        },
+        {
+            titulo:"Grupo 4",
+            colorPrimario:"#DB6EBF",
+            colorSecundario:"#FAE9F5"
+        }
     ]
 
     const manejarCambio = (e) =>{

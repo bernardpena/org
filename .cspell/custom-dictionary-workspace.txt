@@ -28,6 +28,7 @@ funcionalidades
 Grupo
 Ingresar
 inicial
+Lider
 Lista
 manejar
 Metodo
@@ -37,12 +38,15 @@ Muestrero
 Opción
 Opciones
 Operador
+Organigrama
 Organización
+Primario
 Programacion
 Programación
 Puesto
 Refino
 Rellena
+Secundario
 Seleccione
 Ternario
 titulo

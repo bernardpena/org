@@ -17,13 +17,46 @@ function App() {
   const cambiarMostrar = () =>{
       actualizarMostrar(!mostrarFormulario)
   } 
+
+  //lista de equipos
+  const equipos = [
+    {
+      titulo:"Lider SX",
+      colorPrimario:"#57C278",
+      colorSecundario:"#D9F7E9"
+    },
+    {
+      titulo:"Grupo 1",
+      colorPrimario:"#82CFFA",
+      colorSecundario:"#E8F8FF"
+    },
+    {
+      titulo:"Grupo 2",
+      colorPrimario:"#A6D157",
+      colorSecundario:"#F0F8E2"
+    },
+    {
+      titulo:"Grupo 3",
+      colorPrimario:"#E06B69",
+      colorSecundario:"#FDE7E8"
+    },
+    {
+      titulo:"Grupo 4",
+      colorPrimario:"#DB6EBF",
+      colorSecundario:"#FAE9F5"
+    }
+  ]
   return (
     <div >
       <Header />
-      { mostrarFormulario === true ? <Formulario /> : <></> }
-  
+      {/* mostrarFormulario === true ? <Formulario /> : <></> */}
+      {mostrarFormulario && <formulario />}
       <MiOrg cambiarMostrar ={cambiarMostrar} />
-      <Equipo />
+      <Equipo equipo="Lider SX" />
+      <Equipo equipo="Grupo 1" />
+      <Equipo equipo="Grupo 2" />
+      <Equipo equipo="Grupo 3" />
+      <Equipo equipo="Grupo 4" />
     </div>
   );
 }

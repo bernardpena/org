@@ -1,7 +1,8 @@
+import "./Equipo.css"
 
-const Equipo = () =>{
+const Equipo = (props) =>{
     return <section className="equipo">
-        <h3>Programación</h3>
+        <h3>{props.equipo}</h3>
         <div className="colaboradores">
 
 
