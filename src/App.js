@@ -46,17 +46,22 @@ function App() {
       colorSecundario:"#FAE9F5"
     }
   ]
+
   return (
     <div >
       <Header />
       {/* mostrarFormulario === true ? <Formulario /> : <></> */}
       {mostrarFormulario && <formulario />}
       <MiOrg cambiarMostrar ={cambiarMostrar} />
-      <Equipo equipo="Lider SX" />
-      <Equipo equipo="Grupo 1" />
-      <Equipo equipo="Grupo 2" />
-      <Equipo equipo="Grupo 3" />
-      <Equipo equipo="Grupo 4" />
+      
+      {
+        equipos.map( (equipos) => {
+          console.log("Equipo: ", equipos)
+          return <Equipo datos={equipos}/>
+        })
+      }
+
+
     </div>
   );
 }
