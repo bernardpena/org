@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Header from './Componentes/Header/Header';
-import Formulario from './Componentes/Formulario/Formulario.js';
+import Formulario from "./Componentes/Formulario/Formulario.js";
 import MiOrg from './Componentes/MiOrg';
 import Equipo from './Componentes/Equipo';
 
@@ -51,7 +51,7 @@ function App() {
     <div >
       <Header />
       {/* mostrarFormulario === true ? <Formulario /> : <></> */}
-      {mostrarFormulario && <formulario />}
+      {mostrarFormulario && <formulario equipos={equipos.map((equipo) => equipo.titulo)} />}
       <MiOrg cambiarMostrar ={cambiarMostrar} />
       
       {
