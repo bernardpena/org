@@ -55,10 +55,7 @@ function App() {
       <MiOrg cambiarMostrar ={cambiarMostrar} />
       
       {
-        equipos.map( (equipos) => {
-          console.log("Equipo: ", equipos)
-          return <Equipo datos={equipos}/>
-        })
+        equipos.map( (equipo) => <Equipo datos={equipo} key={equipo.titulo} />)
       }
 
 

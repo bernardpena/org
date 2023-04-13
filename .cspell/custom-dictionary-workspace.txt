@@ -16,11 +16,13 @@ crear
 datos
 debe
 dentro
+destructuracion
 Elemento
 Enviar
 Envio
 Equipos
 estado
+estilo
 evento
 Externos
 Foto
@@ -48,6 +50,7 @@ Refino
 Rellena
 Secundario
 Seleccione
+siempre
 Ternario
 titulo
 trabajar
