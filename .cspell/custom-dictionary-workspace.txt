@@ -1,5 +1,6 @@
 # Custom Dictionary Words
 Actualiza
+Actualizados
 actualizar
 agregar
 Alvear
@@ -20,6 +21,7 @@ dentro
 Desarrollado
 destructuracion
 Elemento
+eliminar
 encabezado
 Enviar
 Envio
