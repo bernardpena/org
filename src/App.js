@@ -4,6 +4,7 @@ import Header from './Componentes/Header/Header';
 import Formulario from './Componentes/Formulario/Formulario.js';
 import MiOrg from './Componentes/MiOrg';
 import Equipo from './Componentes/Equipo';
+import Footer from './Componentes/Footer';
 
 
 //El useState debe usarse dentro de un Componente o una 
@@ -11,7 +12,78 @@ import Equipo from './Componentes/Equipo';
 
 function App() {
   const [mostrarFormulario, actualizarMostrar] = useState(false)
-  const [colaboradores, actualizarColaboradores] = useState([])
+  const [colaboradores, actualizarColaboradores] = useState([
+    {
+      equipo:"Grupo 1",
+      foto: "https://www.github.com/bernardpena.png",
+      nombre:"Hans Yufla M.",
+      puesto:"Jefe de Turno"
+    },
+    {
+    equipo:"Grupo 1",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Juan Campos A.",
+    puesto:"Monitor Senior"
+  },
+  {
+    equipo:"Grupo 1",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Fernando Gallardo.",
+    puesto:"Operador SX"
+  },
+  {
+    equipo:"Grupo 1",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Bernardo Peña P.",
+    puesto:"Operador SX"
+  },
+  {
+    equipo:"Grupo 1",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Mauricio Fredes",
+    puesto:"Operador Tank-Farm"
+  },
+  {
+    equipo:"Grupo 1",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Boris Alvear",
+    puesto:"Operador Tank-Farm"
+  },{
+    equipo:"Grupo 2",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Jose Escobar",
+    puesto:"Jefe de Turno"
+  },
+  {
+  equipo:"Grupo 2",
+  foto: "https://www.github.com/bernardpena.png",
+  nombre:"Luis XXXXX",
+  puesto:"Monitor Senior"
+},
+{
+  equipo:"Grupo 2",
+  foto: "https://www.github.com/bernardpena.png",
+  nombre:"Manuel Sandoval",
+  puesto:"Operador SX"
+},
+{
+  equipo:"Grupo 2",
+  foto: "https://www.github.com/bernardpena.png",
+  nombre:"Hans Contreras",
+  puesto:"Operador SX"
+},
+{
+  equipo:"Grupo 2",
+  foto: "https://www.github.com/bernardpena.png",
+  nombre:"Mario xxxx",
+  puesto:"Operador Tank-Farm"
+},
+{
+  equipo:"Grupo 2",
+  foto: "https://www.github.com/bernardpena.png",
+  nombre:"Guaton de la fruta",
+  puesto:"Operador Tank-Farm"
+}])
 
   // !Ternario --> condicion ? seMuestra : noSeMuestra
   // Cortocircuito --> condicion && seMuestra
@@ -78,8 +150,12 @@ function App() {
         colaboradores = {colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo)}
         /> )
      }
+
+     <Footer />
+
     </div>
   );
 }
+
 
 export default App;
