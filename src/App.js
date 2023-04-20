@@ -5,11 +5,13 @@ import Formulario from './Componentes/Formulario/Formulario.js';
 import MiOrg from './Componentes/MiOrg';
 import Equipo from './Componentes/Equipo';
 
+
 //El useState debe usarse dentro de un Componente o una 
 // funcion de un Componente!!! y antes del RETURN!!
 
 function App() {
   const [mostrarFormulario, actualizarMostrar] = useState(false)
+  const [colaboradores, actualizarColaboradores] = useState([])
 
   // !Ternario --> condicion ? seMuestra : noSeMuestra
   // Cortocircuito --> condicion && seMuestra
@@ -17,6 +19,16 @@ function App() {
   const cambiarMostrar = () =>{
       actualizarMostrar(!mostrarFormulario)
   } 
+
+  //Registrar Colaborador
+  const registrarColaborador = (colaborador) =>{
+    console.log("Nuevo Colaborador", colaborador)
+    //spread operater
+    actualizarColaboradores([...colaboradores, colaborador])
+
+  }
+
+
 
   // lista de Equipos
   const equipos = [
@@ -51,11 +63,20 @@ function App() {
     <div >
       <Header />
       {/*mostrarFormulario === true ? <formulario /> : <></> */}
-      {mostrarFormulario && < Formulario equipos={equipos.map((equipo) => equipo.titulo)} />}
+      {mostrarFormulario && < Formulario 
+        equipos={equipos.map((equipo) => equipo.titulo)} 
+        registrarColaborador = {registrarColaborador}
+        />
+      }
+
       <MiOrg cambiarMostrar ={cambiarMostrar} />
      
      {
-      equipos.map((equipo) => <Equipo datos={equipo} key={equipo.titulo} /> )
+      equipos.map((equipo) => <Equipo 
+        datos={equipo} 
+        key={equipo.titulo} 
+        colaboradores = {colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo)}
+        /> )
      }
     </div>
   );
