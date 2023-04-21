@@ -67,7 +67,7 @@ function App() {
     id: uuid(),
     equipo:"Grupo 2",
     foto: "https://www.github.com/bernardpena.png",
-    nombre:"Luis XXXXX",
+    nombre:"Luis Barraza",
     puesto:"Monitor Senior"
   },
   {
@@ -150,9 +150,10 @@ const [equipos, actualizarEquipos] = useState([
   }
 
   //eliminar Colaborador
-  const eliminarColaborador = () =>{
-    console.log("eliminar Colaborador")
-    
+  const eliminarColaborador = (id) =>{
+    console.log("eliminar Colaborador", id)
+    const nuevosColaboradores =colaboradores.filter((colaborador) => colaborador.id !==id )
+    actualizarColaboradores(nuevosColaboradores)
   }
 
   //Actualizar color de Equipos
@@ -167,6 +168,11 @@ const [equipos, actualizarEquipos] = useState([
     actualizarEquipos(equiposActualizados)
   }
 
+  //Crear Equipo
+  const crearEquipo = (nuevoEquipo) =>{
+    console.log(nuevoEquipo)
+    actualizarEquipos([...equipos, {...nuevoEquipo, id:uuid()}])
+  }
 
   return (
     <div >
@@ -175,6 +181,7 @@ const [equipos, actualizarEquipos] = useState([
       {mostrarFormulario && < Formulario 
         equipos={equipos.map((equipo) => equipo.titulo)} 
         registrarColaborador = {registrarColaborador}
+        crearEquipo={crearEquipo}
         />
       }
 

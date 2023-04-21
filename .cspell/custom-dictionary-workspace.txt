@@ -6,6 +6,7 @@ agregar
 Alvear
 asociado
 ayudan
+Barraza
 Boton
 cambiar
 cambio
@@ -48,6 +49,7 @@ Modificado
 Muestra
 Muestrero
 Nuevo
+nuevos
 Opción
 Opciones
 Operador
