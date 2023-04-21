@@ -65,36 +65,40 @@ function App() {
   },
   {
     id: uuid(),
-   equipo:"Grupo 2",
-   foto: "https://www.github.com/bernardpena.png",
-   nombre:"Luis XXXXX",
-   puesto:"Monitor Senior"
+    equipo:"Grupo 2",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Luis XXXXX",
+    puesto:"Monitor Senior"
   },
   {
     id: uuid(),
-  equipo:"Grupo 2",
-  foto: "https://www.github.com/bernardpena.png",
-  nombre:"Manuel Sandoval",
-  puesto:"Operador SX"
- },
- {
-  equipo:"Grupo 2",
-  foto: "https://www.github.com/bernardpena.png",
-  nombre:"Hans Contreras",
-  puesto:"Operador SX"
- },
- {
-  equipo:"Grupo 2",
-  foto: "https://www.github.com/bernardpena.png",
-  nombre:"Mario xxxx",
-  puesto:"Operador Tank-Farm"
- },
- {
-  equipo:"Grupo 2",
-  foto: "https://www.github.com/bernardpena.png",
-  nombre:"Guaton de la fruta",
-  puesto:"Operador Tank-Farm"
-}])
+    equipo:"Grupo 2",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Manuel Sandoval",
+    puesto:"Operador SX"
+  },
+  {
+    id: uuid(),
+    equipo:"Grupo 2",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Hans Contreras",
+    puesto:"Operador SX"
+  },
+  {
+    id: uuid(),
+    equipo:"Grupo 2",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Mario xxxx",
+    puesto:"Operador Tank-Farm"
+  },
+  {
+    id: uuid(),
+    equipo:"Grupo 2",
+    foto: "https://www.github.com/bernardpena.png",
+    nombre:"Guaton de la fruta",
+    puesto:"Operador Tank-Farm"
+  }
+])
 
 const [equipos, actualizarEquipos] = useState([
     {
@@ -152,10 +156,10 @@ const [equipos, actualizarEquipos] = useState([
   }
 
   //Actualizar color de Equipos
-  const actualizarColor = (color, titulo) =>{
-    console.log("Actualizar: ", color, titulo )
+  const actualizarColor = (color, id) =>{
+    console.log("Actualizar: ", color, id )
     const equiposActualizados = equipos.map((equipo) =>{
-      if(equipo.titulo === titulo){
+      if(equipo.id === id){
         equipo.colorPrimario = color
       }
       return equipo
