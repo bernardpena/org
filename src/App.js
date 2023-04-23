@@ -19,84 +19,96 @@ function App() {
       equipo:"Grupo 1",
       foto: "https://www.github.com/bernardpena.png",
       nombre:"Hans Yufla M.",
-      puesto:"Jefe de Turno"
+      puesto:"Jefe de Turno",
+      fav: false
     },
     {
       id: uuid(),
     equipo:"Grupo 1",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Juan Campos A.",
-    puesto:"Monitor Senior"
+    puesto:"Monitor Senior",
+    fav: false
   },
   {
     id: uuid(),
     equipo:"Grupo 1",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Fernando Gallardo.",
-    puesto:"Operador SX"
+    puesto:"Operador SX",
+    fav: false
   },
   {
     id: uuid(),
     equipo:"Grupo 1",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Bernardo Peña P.",
-    puesto:"Operador SX"
+    puesto:"Operador SX",
+    fav: true
   },
   {
     id: uuid(),
     equipo:"Grupo 1",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Mauricio Fredes",
-    puesto:"Operador Tank-Farm"
+    puesto:"Operador Tank-Farm",
+    fav: false
   },
   {
     id: uuid(),
     equipo:"Grupo 1",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Boris Alvear",
-    puesto:"Operador Tank-Farm"
+    puesto:"Operador Tank-Farm",
+    fav: false
   },
   {
     id: uuid(),
     equipo:"Grupo 2",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Jose Escobar",
-    puesto:"Jefe de Turno"
+    puesto:"Jefe de Turno",
+    fav: false
   },
   {
     id: uuid(),
     equipo:"Grupo 2",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Luis Barraza",
-    puesto:"Monitor Senior"
+    puesto:"Monitor Senior",
+    fav: false
   },
   {
     id: uuid(),
     equipo:"Grupo 2",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Manuel Sandoval",
-    puesto:"Operador SX"
+    puesto:"Operador SX",
+    fav: false
   },
   {
     id: uuid(),
     equipo:"Grupo 2",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Hans Contreras",
-    puesto:"Operador SX"
+    puesto:"Operador SX",
+    fav: false,
   },
   {
     id: uuid(),
     equipo:"Grupo 2",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Mario xxxx",
-    puesto:"Operador Tank-Farm"
+    puesto:"Operador Tank-Farm",
+    fav: false
   },
   {
     id: uuid(),
     equipo:"Grupo 2",
     foto: "https://www.github.com/bernardpena.png",
     nombre:"Guaton de la fruta",
-    puesto:"Operador Tank-Farm"
+    puesto:"Operador Tank-Farm",
+    fav: false
   }
 ])
 
@@ -174,6 +186,17 @@ const [equipos, actualizarEquipos] = useState([
     actualizarEquipos([...equipos, {...nuevoEquipo, id:uuid()}])
   }
 
+  const like =(id) =>{
+    console.log("like", id)
+    const colaboradoresActualizados = colaboradores.map((colaborador) => {
+      if (colaborador.id === id){
+        colaborador.fav = !colaborador.fav
+      }
+      return colaborador
+    })
+    actualizarColaboradores(colaboradoresActualizados)
+  }
+
   return (
     <div >
       <Header />
@@ -194,6 +217,7 @@ const [equipos, actualizarEquipos] = useState([
         colaboradores = {colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo)}
         eliminarColaborador = {eliminarColaborador}
         actualizarColor = {actualizarColor}
+        like = {like}
         /> )
      }
 
